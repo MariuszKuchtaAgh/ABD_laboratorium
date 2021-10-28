@@ -84,7 +84,8 @@ def number_film_by_length(min_length: Union[int,float] = 0, max_length: Union[in
             request = f"""select distinct f.length, count(*) 
                         from film f 
                         where f.length <= {max_length} and f.length >= {min_length}
-                        group by f.length"""
+                        group by f.length
+                        order by f.length asc"""
         else:
             return None
     else:

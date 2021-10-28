@@ -5,3 +5,11 @@
 # Foldery PyCharm
 
 **/.idea
+
+# PyTest cache
+
+**/.pytest_cache
+
+# Python cache
+
+**/__pychache__
