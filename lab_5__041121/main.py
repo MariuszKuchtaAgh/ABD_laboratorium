@@ -112,6 +112,7 @@ def film_cast(title:str)->pd.DataFrame:
     Returns:
     pd.DataFrame: DataFrame zawierający wyniki zapytania
     '''
+
     if isinstance(title, str):
         req = f"""
                 select act.first_name as first_name, act.last_name as last_name
@@ -143,10 +144,10 @@ def film_title_case_insensitive(words:list) :
     Returns:
     pd.DataFrame: DataFrame zawierający wyniki zapytania
     '''
+
     if isinstance(words, list) and all(isinstance(word, str) for word in words):
-        reg = "(^.*" + ".*$)|(^.*".join(words) + ".*$)"
-        # reg = "(.*\b" + "\b.*)|(.*\b".join(words) + "\b.*)"
-        # reg = "(\b" + "\b)|(\b".join(words) + "\b)"
+        where = "|".join(words)
+        reg = "(?:^| )({where}){num}(?:$| )".format(where=where, num='{1,}')
         req = f"""
                 select f.title as title
                 from film f 
