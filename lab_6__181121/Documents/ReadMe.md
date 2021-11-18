@@ -7,13 +7,13 @@ Zawartość folderów:
 
 - OriginalData:
 
-    * 13_WARMIN╠üSKO-MAZURSKIE.csv
+    * 13_WARMINSKO-MAZURSKIE.csv
 
           Dane o ocenach odkurzaczy przez klientów. Zawiera dodatkowe informacje o kupującym i o zakupie.
   
     * Metadata:
       
-        * 13_WARMIN╠üSKO-MAZURSKIE_Metadata.md
+        * 13_WARMINSKO-MAZURSKIE_Metadata.md
           
               Dodatkowe informacje o danych z pliku 13_WARMIN╠üSKO-MAZURSKIE.csv
 
